@@ -8,10 +8,10 @@ export default async function fetchUserEmails() {
         }
       });
       
-      // Extract emails from the response
-      const users = response.data.data; // Assuming API response structure
-      console.log(users);
-      const emails = users.map(user => user.email); // Modify as needed
+      
+      const users = response.data.data; 
+      const emails = users.map(user => user.name); 
+      console.log(emails);
       
       return emails;
     } catch (error) {
